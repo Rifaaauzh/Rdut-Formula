@@ -1,10 +1,10 @@
 // Function to calculate Rx = (R2 * (Vin / Vout)) - R1 - R2
-float calculateRx(float Vin, float Vout, float R1, float R2) {
-    return (R2 * (Vin / Vout)) - R1 - R2;
+float calculateRx(float Vi, float Vout, float R1, float R2) {
+    return (R2 * (Vi / Vout)) - R1 - R2;
 }
 
 float voltageDivider(float Vin, float Rx, float R1, float R2) {
-    return Vin * (R2 / (Rx + R1 + R2));
+    return Vi * (R2 / (Rx + R1 + R2));
 }
 
 void setup() {
@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
   
-  float Vin = 12.0;   // Input voltage
+  float Vi = 12.0;   // Input voltage
   float R1 = 100;   // Resistance R1 in ohms
   float R2 = 200000;   // Resistance R2 in ohms
   float Vout = 3.27;
